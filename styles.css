@@ -1,0 +1,166 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.id-card, .id-card-back {
+    position: relative;
+    border: 2px solid #000;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8); /* Background opacity */
+    margin-bottom: 20px;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#idCardFront {
+    background-image: url('background_front_image_url_here');
+}
+
+#idCardBack {
+    background-image: url('background_back_image_url_here');
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#companyLogoImg {
+    max-width: 100px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #333; /* Text color */
+}
+
+.id-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+.id-card-back a {
+    color: #000;
+    text-decoration: none;
+}
+
+#idCardBack {
+    color: #333; /* Text color */
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* styles.css
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.id-card, .id-card-back {
+    position: relative;
+    border: 2px solid #000;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 20px;
+    display: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#idCardFront {
+    background-image: url('redblue.jpg');
+}
+
+#idCardBack {
+    background-image: url('backblue.jpg');
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#companyLogoImg {
+    max-width: 100px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.id-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+.id-card-back a {
+    color: #000;
+    text-decoration: none;
+} */

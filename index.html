@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ID Card Generator</h1>
+        <form id="idCardForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="aadhaar" placeholder="Aadhaar Number" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="date" id="guruDikshaDate" placeholder="Guru Diksha Date" required>
+            <input type="file" id="photo" accept="image/*" required>
+            <button type="submit">Generate ID Card</button>
+        </form>
+        <div id="idCardFront" class="id-card">
+            <div id="logoContainer">
+                <img id="companyLogoImg" src="MPDRST-Logo.png" alt="Company Logo">
+            </div>
+            <h2 id="companyNameText">Maa Parashakti Dharam Rahasya Sewa Trust</h2>
+            <h3>Chairman: Gurudev Shri Suraj Pratap Ji</h3>
+            <img id="profilePic" src="" alt="Profile Photo">
+            <p id="fullName"></p>
+            <p id="aadhaarNumber"></p>
+            <p id="emailAddress"></p>
+            <p id="phoneNumber"></p>
+            <p id="homeAddress"></p>
+            <p id="dikshaDate"></p>
+            <p id="membershipDate"></p>
+            <p id="validityDate"></p>
+        </div>
+        <div id="idCardBack" class="id-card-back">
+            <h3>Terms & Conditions</h3>
+            <p>1. Identification: Carry the ID card at all times during working time for identification purposes.</p>
+            <p>2. Authorized Use: The ID card is strictly for official use and should not be shared or used for unauthorized purposes.</p>
+            <p>3. <a href="https://instagram.com/dharam1rahasya?igshid=MzRlODBiNWFlZA==" target="_blank">Instagram</a></p>
+            <p>4. <a href="https://whatsapp.com/channel/0029VaLIYC735fLt9k8SOX2O" target="_blank">WhatsApp</a></p>
+            <p>5. <a href="https://youtube.com/@dharamrahasya" target="_blank">YouTube</a></p>
+            <p>6. <a href="https://dharamrahasya.com/" target="_blank">Website</a></p>
+            <p>7. Email: dharamrahasya@gmail.com</p>
+        </div>
+        <button id="downloadPNG">Download as PNG</button>
+        <button id="downloadPDF">Download as PDF</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
