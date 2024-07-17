@@ -1,7 +1,6 @@
-/* scripts.js */
 document.getElementById('idCardForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const aadhaar = document.getElementById('aadhaar').value;
     const email = document.getElementById('email').value;
@@ -22,8 +21,8 @@ document.getElementById('idCardForm').addEventListener('submit', function(event)
     document.getElementById('phoneNumber').textContent = `Phone: ${phone}`;
     document.getElementById('homeAddress').textContent = `Address: ${address}`;
     document.getElementById('dikshaDate').textContent = `Guru Diksha Date: ${guruDikshaDate}`;
-    
-    const membershipDate = new Date(); // Replace with actual membership date logic if needed
+
+    const membershipDate = new Date();
     const validityDate = new Date();
     validityDate.setFullYear(validityDate.getFullYear() + 1);
 
@@ -34,31 +33,27 @@ document.getElementById('idCardForm').addEventListener('submit', function(event)
     document.getElementById('idCardBack').style.display = 'block';
 });
 
-document.getElementById('downloadPNG').addEventListener('click', function() {
-    const idCardFront = document.getElementById('idCardFront');
-    const idCardBack = document.getElementById('idCardBack');
-    html2canvas(idCardFront).then(canvasFront => {
-        html2canvas(idCardBack).then(canvasBack => {
-            const link = document.createElement('a');
-            link.download = 'id_card_front.png';
-            link.href = canvasFront.toDataURL('image/png');
-            link.click();
-            link.download = 'id_card_back.png';
-            link.href = canvasBack.toDataURL('image/png');
-            link.click();
-        });
-    });
-});
-
 document.getElementById('downloadPDF').addEventListener('click', function() {
     const idCardFront = document.getElementById('idCardFront');
     const idCardBack = document.getElementById('idCardBack');
+
     html2canvas(idCardFront).then(canvasFront => {
+        const imgDataFront = canvasFront.toDataURL('image/png');
+        const frontHeight = canvasFront.height;
+        const frontWidth = canvasFront.width;
+
         html2canvas(idCardBack).then(canvasBack => {
-            const pdf = new jsPDF('p', 'mm', [297, 210]); // A4 size
-            pdf.addImage(canvasFront.toDataURL('image/png'), 'PNG', 10, 10, 190, 0);
+            const imgDataBack = canvasBack.toDataURL('image/png');
+            const backHeight = canvasBack.height;
+            const backWidth = canvasBack.width;
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', [(Math.max(frontHeight, backHeight) * 210) / Math.max(frontWidth, backWidth), 210]); // Dynamically set height and width
+
+            pdf.addImage(imgDataFront, 'PNG', 0, 0, 210, (210 * frontHeight) / frontWidth);
             pdf.addPage();
-            pdf.addImage(canvasBack.toDataURL('image/png'), 'PNG', 10, 10, 190, 0);
+            pdf.addImage(imgDataBack, 'PNG', 0, 0, 210, (210 * backHeight) / backWidth);
+
             pdf.save('id_card.pdf');
         });
     });

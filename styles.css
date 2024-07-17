@@ -1,166 +1,94 @@
-/* styles.css */
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-input, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.id-card, .id-card-back {
-    position: relative;
-    border: 2px solid #000;
-    padding: 20px;
-    width: 300px;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.8); /* Background opacity */
-    margin-bottom: 20px;
-    display: none;
+    background-color: #f4f4f4;
+    background-image: url('redblue.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-}
-
-#idCardFront {
-    background-image: url('background_front_image_url_here');
-}
-
-#idCardBack {
-    background-image: url('background_back_image_url_here');
-}
-
-#logoContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-#companyLogoImg {
-    max-width: 100px;
-}
-
-h2, h3 {
-    text-align: center;
-    margin: 10px 0;
-    color: #333; /* Text color */
-}
-
-.id-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 10px auto;
-}
-
-.id-card-back a {
-    color: #000;
-    text-decoration: none;
-}
-
-#idCardBack {
-    color: #333; /* Text color */
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* styles.css
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-input, button {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.id-card, .id-card-back {
-    position: relative;
-    border: 2px solid #000;
+    margin: 0;
     padding: 20px;
-    width: 300px;
+}
+
+/* Container styles */
+.container {
+    width: 400px;
+    margin: auto;
     text-align: left;
     background-color: #fff;
-    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button, #downloadPDF {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover, #downloadPDF:hover {
+    background-color: #45a049;
+}
+
+/* ID card styles */
+#idCardFront, #idCardBack {
     display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff; /* Optional background color */
+    background-image: url('pexels-codioful-7130497.jpg'); 
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#idCardFront {
-    background-image: url('redblue.jpg');
-}
-
-#idCardBack {
-    background-image: url('backblue.jpg');
+.id-card h2, .id-card-back h3 {
+    margin: 10px 0;
 }
 
 #logoContainer {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    gap: 10px;
 }
 
 #companyLogoImg {
-    max-width: 100px;
+    height: 50px;
 }
 
-h2, h3 {
-    text-align: center;
-    margin: 10px 0;
+#idCardFront h6 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
 }
 
-.id-card img {
+#profilePic {
     width: 100px;
     height: 100px;
+    object-fit: cover;
     border-radius: 50%;
-    display: block;
-    margin: 10px auto;
+    margin-bottom: 10px;
 }
-
-.id-card-back a {
-    color: #000;
-    text-decoration: none;
-} */
