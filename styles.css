@@ -14,7 +14,7 @@ body {
     width: 400px;
     margin: auto;
     text-align: left;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Container transparency */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -32,13 +32,14 @@ form input {
     margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Input transparency */
 }
 
 form button, #downloadPDF {
     margin-top: 10px;
     padding: 10px;
     width: 100%;
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* Button transparency */
     color: white;
     border: none;
     border-radius: 5px;
@@ -47,7 +48,7 @@ form button, #downloadPDF {
 }
 
 form button:hover, #downloadPDF:hover {
-    background-color: #45a049;
+    background-color: rgba(69, 160, 73, 0.8); /* Hover effect */
 }
 
 /* ID card styles */
@@ -55,13 +56,19 @@ form button:hover, #downloadPDF:hover {
     display: none;
     margin-top: 20px;
     padding: 20px;
-    background-color: #fff; /* Optional background color */
-    background-image: url('pexels-codioful-7130497.jpg'); 
     background-size: cover;
     background-position: center;
     color: #000;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#idCardFront {
+    background-image: url('pexels-codioful-7130497.jpg'); /* Front background image */
+}
+
+#idCardBack {
+    background-image: url('pexels-codioful-7130497.jpg'); /* Back background image */
 }
 
 .id-card h2, .id-card-back h3 {
